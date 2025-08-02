@@ -6,29 +6,31 @@
   <title>Your Name | Graphic Designer</title>
   <style>
     :root {
-      --primary: #ff3e6c;
-      --bg: #1a1a1a;
-      --text: #ffffff;
-      --accent: #00c2ff;
+      --primary: #0ff;
+      --bg: #0a0a0a;
+      --text: #e0f7ff;
+      --accent: #09f;
+      --glow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #09f;
     }
 
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Orbitron', sans-serif;
     }
 
     body {
-      background: var(--bg);
+      background: radial-gradient(circle at top center, #0a0a0a 0%, #000 100%);
       color: var(--text);
       line-height: 1.6;
       padding-bottom: 50px;
+      overflow-x: hidden;
     }
 
     header {
       padding: 2rem;
-      background: var(--primary);
+      background: transparent;
       text-align: center;
       position: sticky;
       top: 0;
@@ -36,19 +38,33 @@
     }
 
     header h1 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
+      color: var(--primary);
+      text-shadow: var(--glow);
+    }
+
+    header p {
+      color: var(--accent);
+      text-shadow: var(--glow);
     }
 
     .intro {
       text-align: center;
       margin: 3rem auto;
-      max-width: 700px;
+      max-width: 800px;
       padding: 0 1rem;
     }
 
     .intro h2 {
-      font-size: 2rem;
-      color: var(--accent);
+      font-size: 2.2rem;
+      color: var(--primary);
+      text-shadow: var(--glow);
+    }
+
+    .intro p {
+      font-size: 1.1rem;
+      margin-top: 1rem;
+      color: var(--text);
     }
 
     .gallery {
@@ -61,15 +77,17 @@
     }
 
     .gallery-item {
-      background: #2a2a2a;
+      background: rgba(0, 255, 255, 0.05);
+      border: 1px solid #0ff3;
       border-radius: 10px;
       overflow: hidden;
+      box-shadow: 0 0 15px #09f3;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .gallery-item:hover {
       transform: scale(1.03);
-      box-shadow: 0 0 20px var(--accent);
+      box-shadow: 0 0 20px #0ff, 0 0 40px #09f;
     }
 
     .gallery-item img {
@@ -81,21 +99,42 @@
     .gallery-item p {
       padding: 1rem;
       text-align: center;
+      color: var(--text);
     }
 
     footer {
       text-align: center;
       padding: 2rem;
-      background: #111;
-      margin-top: 2rem;
+      background: #000;
+      border-top: 1px solid #0ff3;
     }
 
     footer a {
       color: var(--accent);
       text-decoration: none;
       font-weight: bold;
+      text-shadow: var(--glow);
+    }
+
+    button {
+      background: transparent;
+      border: 1px solid var(--accent);
+      padding: 0.5rem 1rem;
+      margin: 0.2rem;
+      color: var(--accent);
+      cursor: pointer;
+      font-weight: bold;
+      text-shadow: var(--glow);
+      border-radius: 5px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    button:hover {
+      background: var(--accent);
+      color: #000;
     }
   </style>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
