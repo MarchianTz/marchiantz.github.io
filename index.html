@@ -1,204 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Erick's Page</title>
-  <style>
-    :root {
-      --primary: #0ff;
-      --bg: #0a0a0a;
-      --text: #e0f7ff;
-      --accent: #09f;
-      --glow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #09f;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Erick's Page</title>
+    <style>
+        :root {
+            --primary: #0ff;
+            --bg: #0a0a0a;
+            --text: #e0f7ff;
+            --accent: #09f;
+            --glow: 0 0 4px #0ff, 0 0 8px #09f;
+        }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Orbitron', sans-serif;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Orbitron', sans-serif;
+        }
 
-    body {
-      background: radial-gradient(circle at top center, #0a0a0a 0%, #000 100%);
-      color: var(--text);
-      line-height: 1.6;
-      padding-bottom: 50px;
-      overflow-x: hidden;
-    }
+        h2 {
+            margin: 1.5rem;
+            text-align: center;
+        }
 
-    header {
-      padding: 2rem;
-      background: transparent;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
+        body {
+            background: radial-gradient(circle at top center, #0a0a0a 0%, #000 100%);
+            color: var(--text);
+            line-height: 1.6;
+            padding-bottom: 50px;
+            overflow-x: hidden;
+        }
 
-    header h1 {
-      font-size: 2.8rem;
-      color: var(--primary);
-      text-shadow: var(--glow);
-    }
+        header {
+            padding: 2rem;
+            background: #0a0a0a;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            border-bottom: 2px solid var(--primary);
+            box-shadow: 0 0 10px #0ff;
+        }
 
-    header p {
-      color: var(--accent);
-      text-shadow: var(--glow);
-    }
+        header h1 {
+            font-size: 2.8rem;
+            color: var(--primary);
+            text-shadow: var(--glow);
+        }
 
-    .intro {
-      text-align: center;
-      margin: 3rem auto;
-      max-width: 800px;
-      padding: 0 1rem;
-    }
+        header p {
+            color: var(--accent);
+            text-shadow: var(--glow);
+        }
 
-    .intro h2 {
-      font-size: 2.2rem;
-      color: var(--primary);
-      text-shadow: var(--glow);
-    }
+        .intro {
+            text-align: center;
+            margin: 3rem auto;
+            max-width: 800px;
+            padding: 0 1rem;
+        }
 
-    .intro p {
-      font-size: 1.1rem;
-      margin-top: 1rem;
-      color: var(--text);
-    }
+        .intro h2 {
+            font-size: 2.2rem;
+            color: var(--primary);
+            text-shadow: var(--glow);
+        }
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
+        .intro p {
+            font-size: 1.1rem;
+            margin-top: 1rem;
+            color: var(--text);
+        }
 
-    .gallery-item {
-      background: rgba(0, 255, 255, 0.05);
-      border: 1px solid #0ff3;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 0 15px #09f3;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
 
-    .gallery-item:hover {
-      transform: scale(1.03);
-      box-shadow: 0 0 20px #0ff, 0 0 40px #09f;
-    }
+        .gallery-item {
+            background: rgba(0, 255, 255, 0.05);
+            border: 1px solid #0ff3;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 15px #09f3;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-    .gallery-item img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
+        .gallery-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 20px #0ff, 0 0 40px #09f;
+        }
 
-    .gallery-item p {
-      padding: 1rem;
-      text-align: center;
-      color: var(--text);
-    }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
 
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background: #000;
-      border-top: 1px solid #0ff3;
-    }
+        .gallery-item h2 {
+            margin: 0 0 0.5rem;
+            color: var(--accent-color);
+            text-shadow: 0 0 5px var(--accent-color);
+        }
 
-    footer a {
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: bold;
-      text-shadow: var(--glow);
-    }
+        .gallery-item p {
+            padding: 1rem;
+            text-align: center;
+            color: var(--text);
+        }
 
-    button {
-      background: transparent;
-      border: 1px solid var(--accent);
-      padding: 0.5rem 1rem;
-      margin: 0.2rem;
-      color: var(--accent);
-      cursor: pointer;
-      font-weight: bold;
-      text-shadow: var(--glow);
-      border-radius: 5px;
-      transition: background 0.3s ease, color 0.3s ease;
-    }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #000;
+            border-top: 1px solid #0ff3;
+        }
 
-    button:hover {
-      background: var(--accent);
-      color: #000;
-    }
-  </style>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: bold;
+            text-shadow: var(--glow);
+        }
+
+        button {
+            background: transparent;
+            border: 1px solid var(--accent);
+            padding: 0.5rem 1rem;
+            margin: 0.2rem;
+            color: var(--accent);
+            cursor: pointer;
+            font-weight: bold;
+            text-shadow: var(--glow);
+            border-radius: 5px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        button:hover {
+            background: var(--accent);
+            color: #000;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1 data-i18n="name">Erick Marchian</h1>
-    <p data-i18n="tagline">Programmer | Graphic Designer</p>
-  </header>
+    <header>
+        <h1 data-i18n="name">Erick Marchian</h1>
+        <p data-i18n="tagline">Programmer | Graphic Designer</p>
+        <div style="text-align: center; margin: 1rem;">
+            <button onclick="switchLanguage('en')">🇺🇸 English</button>
+            <button onclick="switchLanguage('id')">🇮🇩 Bahasa</button>
+        </div>
+    </header>
 
-  <div style="text-align: center; margin: 1rem;">
-    <button onclick="switchLanguage('en')">🇺🇸 English</button>
-    <button onclick="switchLanguage('id')">🇮🇩 Bahasa</button>
-  </div>
+    <section class="intro">
+        <h2 data-i18n="welcome">Welcome to My Portfolio</h2>
+        <p data-i18n="intro">
+            Here you'll find a collection of my favorite graphic design work. I aim to create visuals that make an impact.
+        </p>
+    </section>
 
-  <section class="intro">
-    <h2 data-i18n="welcome">Welcome to My Portfolio</h2>
-    <p data-i18n="intro">
-      Here you'll find a collection of my favorite graphic design work. I aim to create visuals that make an impact.
-    </p>
-  </section>
+    <section class="gallery">
+        <div class="gallery-item">
+            <img src="img1.png" alt="Design 1" />
+            <h2>3D Render – Legendary Shield (The Rising of the Shield Hero)</h2>
+            <p>
+                A detailed 3D modeling and rendering study inspired by Naofumi’s iconic shield from the anime 
+                <em>The Rising of the Shield Hero</em>. Focused on material detailing, lighting, and polished holographic aesthetics.
+            </p>
+        </div>
 
-  <section class="gallery">
-    <div class="gallery-item">
-      <img src="https://www.canva.com/design/DAFIOIxhmQQ/gUTeNek7Kv2CokTTadu2_A/edit" alt="Design 1" />
-      <p>Project Title or Description</p>
-    </div>
-    <div class="gallery-item">
-      <img src="https://via.placeholder.com/400x300.png?text=Design+2" alt="Design 2" />
-      <p>Project Title or Description</p>
-    </div>
-    <div class="gallery-item">
-      <img src="https://via.placeholder.com/400x300.png?text=Design+3" alt="Design 3" />
-      <p>Project Title or Description</p>
-    </div>
-  </section>
+        <div class="gallery-item">
+            <img src="img2.png" alt="Design 2" />
+            <h2>Logo & Brand Identity – Previ Online Store</h2>
+            <p>
+                Custom logo design developed for my own e-commerce brand, <strong>Previ</strong>. 
+                The geometric and futuristic style emphasizes clarity, symmetry, and a bold modern identity.
+            </p>
+        </div>
 
-  <footer>
-    <p data-i18n="footer">Made with ♥ by Your Name</p>
-  </footer>
+        <div class="gallery-item">
+            <img src="https://via.placeholder.com/400x300.png?text=Design+3" alt="Design 3" />
+            <h2>TBA</h2>      
+            <p>TBA</p>
+        </div>
+    </section>
 
-  <script>
-    const translations = {
-      en: {
-        name: "Erick Marchian",
-        tagline: "Graphic Designer | Programmer",
-        welcome: "Welcome to My Portfolio",
-        intro: "Here you'll find a collection of my favorite graphic design work.I aim to create visuals that make an impact.",
-        footer: "Made with ♥ by Erick"
-      },
-      id: {
-        name: "Erick Marchian",
-        tagline: "Programmer | Desainer Grafis",
-        welcome: "Selamat Datang di Portofolio Saya",
-        intro: "Di sini Anda akan menemukan koleksi karya desain grafis favorit saya. Saya berusaha menciptakan visual yang berdampak.",
-        footer: "Dibuat dengan ♥ oleh Erick"
-      }
-    };
+    <footer>
+        <p data-i18n="footer">Made with ♥ by Erick</p>
+    </footer>
 
-    function switchLanguage(lang) {
-      document.querySelectorAll("[data-i18n]").forEach((el) => {
-        const key = el.getAttribute("data-i18n");
-        if (translations[lang][key]) {
-          el.innerText = translations[lang][key];
+    <script>
+        const translations = {
+            en: {
+                name: "Erick Marchian",
+                tagline: "Graphic Designer | Programmer",
+                welcome: "Welcome to My Portfolio",
+                intro: "Here you'll find a collection of my favorite graphic design work.I aim to create visuals that make an impact.",
+                footer: "Made with ♥ by Erick"
+            },
+            id: {
+                name: "Erick Marchian",
+                tagline: "Programmer | Desainer Grafis",
+                welcome: "Selamat Datang di Portofolio Saya",
+                intro: "Di sini Anda akan menemukan koleksi karya desain grafis favorit saya. Saya berusaha menciptakan visual yang berdampak.",
+                footer: "Dibuat dengan ♥ oleh Erick"
+            }
+        };
+
+        function switchLanguage(lang) {
+            document.querySelectorAll("[data-i18n]").forEach((el) => {
+                const key = el.getAttribute("data-i18n");
+                if (translations[lang][key]) {
+                    el.innerText = translations[lang][key];
+                }
+            });
         }
-      });
-    }
-  </script>
+    </script>
 </body>
 </html>
